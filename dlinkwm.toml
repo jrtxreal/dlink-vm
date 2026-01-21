@@ -1,0 +1,28 @@
+# DlinkWM Configuration File
+# This file can be modified to dynamically change entry functions without restarting
+
+# Entry Functions Configuration
+# Define specific entry functions for different WASM files
+# Key: WASM file path (relative or absolute)
+# Value: List of entry functions to try for this specific file
+# The functions are tried in the order they appear in the list
+
+[entry_functions]
+# Example configuration for wasm_test.wasm
+# Tries to call dlinkwm_print_hello_wasm first, then dlinkwm_test_host_methods if the first fails
+"wasm/wasm_test.wasm" = [
+"dlinkwm_print_hello_wasm",    # First try this function
+"dlinkwm_call_host_method"      # Then try this function if the first fails
+]
+
+# Example configuration for hello_simple.wasm
+# Only tries a single entry function
+"wasm/hello_simple.wasm" = ["dlinkwm_simple_entry"]
+
+# Example configuration for hello_only.wasm
+# Only tries a single entry function
+"wasm/hello_only.wasm" = ["dlinkwm_hello_entry"]
+
+# Example configuration for a custom WASM file
+# You can add more entries like this for your own WASM files
+# "path/to/your/wasm/file.wasm" = ["your_entry_function1", "your_entry_function2"]

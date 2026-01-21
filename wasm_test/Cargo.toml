@@ -1,0 +1,20 @@
+[package]
+name = "wasm_test"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[target.wasm32-unknown-unknown.dependencies]
+
+[target.wasm32-unknown-unknown]
+runner = "wasmtime"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[dependencies]

@@ -1,0 +1,27 @@
+[package]
+name = "dlink-wm"
+version = "0.1.0"
+edition = "2021"
+authors = ["DlinkWM Team <team@dlinkwm.com>"]
+description = "Dynamic Linking WebAssembly Manager - A Rust-based WASM dynamic calling host"
+license = "MIT"
+repository = "https://github.com/dlinkwm/dlink-wm"
+keywords = ["wasm", "webassembly", "dynamic", "hot-reload", "interoperability"]
+categories = ["wasm", "web-programming", "development-tools", "concurrency"]
+readme = "README.md"
+
+[dependencies]
+wasmtime = "12.0.0"
+wasmtime-wasi = "12.0.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3.3"
+toml = "0.8.8"
+notify = "6.1.1"
+chrono = "0.4.31"
+clap = { version = "4.4.8", features = ["derive"] }
+log = "0.4.20"
+env_logger = "0.10.0"
+anyhow = "1.0.75"
+
+
