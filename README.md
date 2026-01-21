@@ -1,8 +1,6 @@
 # DlinkWM: Dynamic Linking WebAssembly Manager
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Rust](https://github.com/dlinkwm/dlink-wm/actions/workflows/rust.yml/badge.svg)](https://github.com/dlinkwm/dlink-wm/actions/workflows/rust.yml)
-
 DlinkWM is a Rust-based WebAssembly (WASM) dynamic calling host that enables loading, calling, and hot-reloading of WASM modules written in multiple languages. It provides a robust and efficient way to integrate WASM components into your Rust applications with minimal friction.
 
 ## 🚀 Features
